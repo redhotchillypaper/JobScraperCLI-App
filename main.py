@@ -8,10 +8,11 @@ if __name__ == "__main__":
 
 
 # TODO:
+# connect scraper to database (OOP?)
 # database of already found jobs
 # scraper of linkedin (maybe some other resources attached)
 # email automatio
-# salary to hourly convert and preference in email
+# salary to hourly convert and preference in emaila
 
 
 
