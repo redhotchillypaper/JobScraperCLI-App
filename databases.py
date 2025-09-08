@@ -85,20 +85,6 @@ class Database:
 
 
 def main():
-    db = "/Users/noname/Projects/JobScraperCLI App/jobs.db" # put in gitignore
-    table = "jobs"
-    database = Database(db, table)
-    database.create_database()
-    # database.create_database(db, table)                       # create table if it doesn't exist
-    database.add_to_database("cook", "529", "https://529.com")
-    print(f"Inserted row id: {database.new_id}")
-
-    rows = database.get_all_jobs()
-    for r in rows:
-        print(r)
-
-    # database.clean_database()   # uncomment to clear the table
-    # database.reset_database()   # uncomment to drop all tables
-
+    pass
 if __name__ == "__main__":
     main()

@@ -1,5 +1,34 @@
+
+from dotenv import load_dotenv
+import os
+from databases import Database as DB
+
 def main():
-    pass
+    # Load .env file
+    load_dotenv()  # by default looks for ".env" in the current directory
+
+    
+    
+    
+    #Databases
+    db_path = os.getenv("DATABASE_PATH")
+
+
+    table = "jobs"
+    database = DB(db_path, table)
+    database.create_database()
+    # database.create_database(db, table)                       # create table if it doesn't exist
+    database.add_to_database("cook", "529", "https://529.com")
+    print(f"Inserted row id: {database.new_id}")
+
+    rows = database.get_all_jobs()
+    for r in rows:
+        print(r)
+
+    # database.clean_database()   # uncomment to clear the table
+    # database.reset_database()   # uncomment to drop all tables
+
+
 
 if __name__ == "__main__":
     main()
